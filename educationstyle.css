@@ -1,0 +1,186 @@
+body {
+   background-color: #2b2a2f;
+   background-size: cover;
+   background-position: center;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 10px 0; /* Tambah padding atas untuk jarak dari atas */
+   color: white;
+   display: flex;
+   flex-direction: column; /* Tambahkan agar konten disusun vertikal */
+   align-items: center; /* Agar konten termasuk heading di tengah horizontal */
+   min-height: 100vh;
+}
+h1 {
+   text-align: center; /* Pusatkan teks */
+   font-size: 2rem; /* Ukuran font */
+   margin: 0; /* Hilangkan margin default */
+   padding-bottom: 20px; /* Tambah jarak di bawah heading */
+   color: #ffffff;
+}
+.heading {
+   font-size: 36px; /* Besarkan ukuran font */
+   font-weight: bold;
+   text-align: center;
+   color: white;
+   position: relative;
+   margin-bottom: 20px;
+}
+.heading::after {
+   content: "";
+   display: block;
+   width: 200px; /* Panjang garis */
+   height: 4px; /* Ketebalan garis */
+   background-color: #787cb5; /* Warna garis */
+   margin: 10px auto 0; /* Posisi garis */
+   border-radius: 2px; /* Membuat garis agak melengkung */
+}
+.container {
+   max-width: 1200px;
+   margin: 40px auto; /* Tambah jarak margin lebih besar untuk container */
+   padding: 30px;
+   color: white;
+}
+.container .row {
+   display: grid;
+   grid-template-columns: 1fr 2px 1fr;
+   grid-column-gap: 40px;
+}
+.row .date {
+   grid-area: theDate;
+}
+.row .line {
+   position: relative;
+   background-color: white;
+   grid-area: theLine;
+}
+.line span {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background-color: #101010;
+   border: 2px solid #787cb5;
+   border-radius: 50%;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: all 0.5s;
+}
+.row .content {
+   padding: 20px;
+   background-color: #222222;
+   border-radius: 10px;
+   grid-area: theContent;
+}
+.content h2 {
+   padding-bottom: 8px;
+   color: #787cb5;
+}
+.content p {
+   line-height: 1.5;
+}
+.row:nth-child(odd) {
+   grid-template-areas: 'theDate theLine theContent';
+}
+.row:nth-child(even) {
+   grid-template-areas: 'theContent theLine theDate';
+}
+.row .content, .row .date {
+   margin-bottom: 35px;
+}
+.row:nth-child(odd) .date {
+   text-align: right;
+}
+.date span {
+   display: inline-block;
+   padding: 10px 16px;
+   font-weight: 600;
+   border: 2px solid #787cb5;
+   border-radius: 25px;
+   position: relative;
+   top: -7px;
+}
+.line .last-point {
+   top: initial;
+   bottom: 0;
+}
+.row .last {
+   margin-bottom: 0;
+}
+.row:hover .line span:not(.last-point) {
+   background-color: yellow;
+   box-shadow: 0 0 9px 3px yellow;
+}
+@media(max-width: 768px) {
+   .row:nth-child(odd),
+   .row:nth-child(even) {
+      grid-template-columns: 2px 1fr;
+      grid-template-areas: 'theLine theDate'
+                           'theLine theContent';
+   }
+   .row:nth-child(odd) .date {
+   text-align: left;
+   }
+
+   .row .date {
+   margin-bottom: 5px;
+   }
+   .row .content {
+   margin-bottom: 25px;
+   }
+   .row .last {
+   margin-bottom: 5px;
+   }
+}
+@media(max-width: 520px) {
+   .row .line {
+   display: none;
+   }
+   .row:nth-child(odd),
+   .row:nth-child(even) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+   }
+}
+.card-container{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 25px;
+   margin-top: 100px;
+}
+.card{
+   width: 325px;
+   border-radius: 10px;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+   overflow: hidden;
+   transition: transform 0.6s ease;
+}
+.card:hover{
+   transform: translateY(-20px);
+}
+.card img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+.card-content{
+   padding: 20px;
+}
+.card-content h1{
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+.card-content p{
+   font-size: 14px;
+   color: #666;
+   margin-bottom: 20px;
+}
+.card-button{
+   display: inline-block;
+   background-color: #3498db;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 5px;
+   padding: 8px 16px;
+}

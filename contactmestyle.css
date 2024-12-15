@@ -1,0 +1,101 @@
+body {
+    background-color: #2b2a2f;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px 0; /* Tambah padding atas untuk jarak dari atas */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+img {
+   border-radius: 10px; /* Untuk tepi gambar bulat */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Tambahkan bayangan */
+   margin-bottom: 100px;
+   margin-left: 800px;
+   margin-top: -500px;
+   transition: transform 0.3s ease;
+   transform: scale(1.2);
+}
+.row {
+    display: flex;
+    height: 65%;
+    align-items: center;
+    color: white;
+    margin-left: 145px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.col {
+    flex-basis: 50%;
+    color: white;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px; /* Lebar maksimum borang */
+    text-align: center;
+    margin-top: 50px; /* Tambah jarak atas untuk menurunkan borang */
+}
+form h1 {
+    margin-bottom: 20px;
+    font-size: 100px; /* Tukar saiz teks kepada yang lebih besar */
+    font-weight: bold; /* Menjadikan teks lebih tebal (jika perlu) */
+    color: white; /* Pastikan teks jelas kelihatan */
+    width: 100px;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Sesuai dengan lebar borang */
+    height: 50px; /* Tinggi input */
+    margin: 10px 0; /* Jarak antara elemen */
+    padding: 10px; /* Jarak dalam kotak */
+    font-size: 16px; /* Saiz teks */
+    border: 1px solid #ccc; /* Warna border input */
+    border-radius: 5px; /* Border melengkung */
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+textarea {
+    height: 100px; /* Tinggi untuk textarea */
+    resize: none; /* Menghalang pengguna menukar saiz */
+}
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: #e3b505; /* Warna butang */
+    color: white; /* Warna teks */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049; /* Warna butang semasa hover */
+}
+.marquee span {
+    display: inline-block;
+    animation: marquee 20s linear infinite; /* Durasi animasi: 10 saat */
+    font-size: 3rem; /* Saiz teks */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; /* Warna teks kuning */
+    border: 2px dashed white; /* Border dashed (putus-putus) untuk teks */
+    padding: 10px; /* Ruang dalam teks */
+    border-radius: 20px; /* Bucu bulat untuk border teks */
+}
+/* Keyframe animasi */
+@keyframes marquee {
+    from {
+        transform: translateX(100%); /* Mula di luar kanan */
+    }
+    to {
+        transform: translateX(-100%); /* Tamat di luar kiri */
+    }
+}

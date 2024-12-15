@@ -1,0 +1,211 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+body{
+   width: 100%;
+   max-width: 1400px;
+   min-height: 100vh;
+   padding: 0px 8%;
+   background-color:#2b2a2f;
+   color: white;
+}
+.home{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   max-height: 700px;
+}
+.home .background-text{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+.home .background-text h1{
+   font-size: calc(42px + 3.5vw);
+   font-weight: 900;
+   letter-spacing: 15px;
+   text-shadow: #787cb5;
+   color: #333333;
+   margin-top: 120px;
+}
+.home .background-text h1:nth-of-type(1){
+   position: absolute;
+   top: 110px;
+   left: -8%;
+}
+.home .background-text h1:nth-of-type(2){
+   position: absolute;
+   right: -2%;
+   left: 50px;
+}
+.home .navbar{
+   position: fixed;
+   height: 120px;
+   width: 100%;
+   left: 0;
+   right: 0;
+   top: 0;
+   padding: 0px 8%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #3e3e3e;
+   z-index: 100;
+}
+.home .navbar .logo{
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+.navbar .logo img{
+   width: 140px;
+}
+.navbar .nav-links li{
+   list-style: none;
+}
+.navbar .nav-links li{
+   display: inline-block;
+   margin-left: 20px;
+}
+.navbar .nav-links li a{
+   text-decration: none;
+   font-size: 15px;
+   letter-spacing: 1px;
+   font-weight: 300;
+   color: var(--light-text-clr);
+   transition: color 0.3s;
+}
+.navbar .nav-links li a:hover{
+   color: #e3b505;
+}
+button.btn{
+   padding: 10px 25px;
+   background-color: transparent;
+   border: 1px solid #787cb5;
+   color: white;
+   border-radius: 25px;
+   font-size: 14px;
+   letter-spacing: 1px;
+   transition: 0.4s;
+   cursor: pointer;
+}
+button.btn:hover{
+   background-color: transparent;
+   color: #00ced1;
+}
+.home .home-desc{
+   position: relative;
+   height: calc(100% - 80px);
+   top: 80px;
+   display: grid;
+   grid-template-columns: 1fr 45% 25px;
+}
+.home-desc .sect-intro{
+   position: relative;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+.home-desc .sect-intro h3{
+   position: relative;
+   display: inline-block;
+   color: #787cb5;
+   font-size: calc(16px + 0.5vw);
+   font-weight: 400;
+   cursor: pointer;
+}
+.home-desc .sect-intro h3::before{
+   position: relative;
+   content: '';
+   display: inline-block;
+   width: 50px;
+   height: 1px;
+   background-color: #787cb5;
+   margin-right: 10px;
+   margin-bottom: 6px;
+   transition: width 0.5s;
+}
+.home-desc .sect-intro h3:hover::before{
+   width: 65px;
+}
+.home-desc .sect-intro h1{
+   font-size: calc(32px + 2.5vw);
+   font-weight: 500;
+   color: var(--light-head-clr);
+   margin: 10px 0px 15px;
+}
+.home-desc .sect-intro p{
+   font-size: 15px;
+   color: var(--light-text-clr);
+   line-height: 1.8;
+   max-width: 500;
+}
+.home-desc .sec-intro .cv-btn{
+   margin-top: 30px;
+}
+.home-desc .sect-img{
+   position: relative;
+   height: 100%;
+}
+.home-desc .sect-img img{
+   width: 490px;
+   height: 590px;
+   position: absolute;
+   margin-top: 60px;
+   margin-left: 100px;
+   transition: transform 0.3s ease;
+}
+.home-desc .sect-img img:hover{
+   transform: scale(1.2);
+}
+.home-desc .sect-media{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /* Pembetulan dari "justidy-content" */
+   align-items: center;
+   margin-left: 145px;
+   margin-top: 60px;
+}   
+.home-desc .sect-media a{
+   position: relative;
+   color: #787cb5;
+   text-decoration: none;
+   font-size: calc(10px + 0.4vw);
+   margin: 10px 0px;
+   transition: transform 0.2s, color 0.3s; /* Tambah kesan animasi */
+}
+
+.home-desc .sect-media a:active{
+   transform: scale(1.3); /* Membesarkan ikon sebanyak 10% */
+}
+.home-desc .sect-media a:hover{
+   color: var(--primary-clr);
+}
+.home-desc .sect-media a:first-child::before{
+   position: absolute;
+   content: '';
+   width: 1px;
+   height: 100px;
+   background-color: white;
+   bottom: 50px;
+   left: 8px;
+   transform: translateX(-50%);
+}
+.home-desc .sect-media a:last-child::before{
+   position: absolute;
+   content: '';
+   width: 1px;
+   height: 100px;
+   background-color: white;
+   top: 50px;
+   left: 8px;
+   transform: translateX(-50%);
+}
+
